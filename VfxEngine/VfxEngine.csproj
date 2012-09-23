@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD8B6D19-0589-46B4-A162-F81BF04DE328}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VfxEngine</RootNamespace>
+    <AssemblyName>VfxEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FixApp\IVfxFixApp.cs" />
+    <Compile Include="FixApp\IVfxFixAppSession.cs" />
+    <Compile Include="FixAssembler\VfxFixAssembler.cs" />
+    <Compile Include="FixDatabase\IVfxFixDatabase.cs" />
+    <Compile Include="FixDatabase\VfxFixDatabaseFactory.cs" />
+    <Compile Include="FixDatabase\VfxFixDatabaseRecord.cs" />
+    <Compile Include="FixDatabase\VfxFixFileDatabase.cs" />
+    <Compile Include="FixDatabase\XmlFixDatabaseRecord.cs" />
+    <Compile Include="FixDxRegistry\IVfxFixDxRegistry.cs" />
+    <Compile Include="FixDxRegistry\VfxFixDxRegistry.cs" />
+    <Compile Include="FixEngine\IVfxFixService.cs" />
+    <Compile Include="FixEngine\VfxFixClientService.cs" />
+    <Compile Include="FixEngine\VfxFixClientSession.cs" />
+    <Compile Include="FixEngine\VfxFixEngine.cs" />
+    <Compile Include="FixEngine\VfxFixServerService.cs" />
+    <Compile Include="FixEngine\VfxFixServerSession.cs" />
+    <Compile Include="FixEngine\VfxFixServiceEventArgs.cs" />
+    <Compile Include="FixEngine\VfxFixServiceEventTypes.cs" />
+    <Compile Include="FixEngine\VfxFixServiceFactory.cs" />
+    <Compile Include="FixEngine\VfxFixServiceStates.cs" />
+    <Compile Include="FixEngine\VfxFixServiceStatus.cs" />
+    <Compile Include="FixEngine\VfxFixServiceStatusConverter.cs" />
+    <Compile Include="FixParser\VfxFixParser.cs" />
+    <Compile Include="FixParser\VfxFixParserResult.cs" />
+    <Compile Include="FixParser\VfxFixParserStatus.cs" />
+    <Compile Include="FixSessions\FixSessionStates.cs" />
+    <Compile Include="FixSessions\IVfxFixSession.cs" />
+    <Compile Include="FixSessions\IVfxFixSessionHandler.cs" />
+    <Compile Include="FixSessions\VfxFix4xClientSession.cs" />
+    <Compile Include="FixSessions\VfxFix4xServerSession.cs" />
+    <Compile Include="FixSessions\VfxFix5xClientSession.cs" />
+    <Compile Include="FixSessions\VfxFix5xServerSession.cs" />
+    <Compile Include="FixValidator\FixValidator.cs" />
+    <Compile Include="FixVxHelper\VfxFixVxHelper.cs" />
+    <Compile Include="FixVxMatcher\IVfxFixVxMatcher.cs" />
+    <Compile Include="FixVxMatcher\VfxFixVxMatcher.cs" />
+    <Compile Include="FixVxRegistry\VfxFixVxRecord.cs" />
+    <Compile Include="FixVxRegistry\VfxFixVxRecords.cs" />
+    <Compile Include="FixVxRegistry\VfxFixVxRegistry.cs" />
+    <Compile Include="Fix\FixCalculator.cs" />
+    <Compile Include="Fix\FixCollection.cs" />
+    <Compile Include="Fix\FixDictionary.cs" />
+    <Compile Include="Fix\FixDxBlock.cs" />
+    <Compile Include="Fix\FixDxBlockReference.cs" />
+    <Compile Include="Fix\FixDxCollection.cs" />
+    <Compile Include="Fix\FixDxDataType.cs" />
+    <Compile Include="Fix\FixDxEnumeration.cs" />
+    <Compile Include="Fix\FixDxEnumerator.cs" />
+    <Compile Include="Fix\FixDxExporter.cs" />
+    <Compile Include="Fix\FixDxField.cs" />
+    <Compile Include="Fix\FixDxFieldReference.cs" />
+    <Compile Include="Fix\FixDxGroupReference.cs" />
+    <Compile Include="Fix\FixDxImporter.cs" />
+    <Compile Include="Fix\FixDxMessage.cs" />
+    <Compile Include="Fix\FixDxResolvedField.cs" />
+    <Compile Include="Fix\FixDxResolvedGroup.cs" />
+    <Compile Include="Fix\FixField.cs" />
+    <Compile Include="Fix\FixFinalizer.cs" />
+    <Compile Include="Fix\FixGroup.cs" />
+    <Compile Include="Fix\FixMessage.cs" />
+    <Compile Include="Fix\IFixDxExporter.cs" />
+    <Compile Include="Fix\IFixDxFactory.cs" />
+    <Compile Include="Fix\IFixDxImporter.cs" />
+    <Compile Include="Fix\IFixElement.cs" />
+    <Compile Include="Fix\QfxFixDxExporter.cs" />
+    <Compile Include="Fix\QfxFixDxFactory.cs" />
+    <Compile Include="Fix\QfxFixDxImporter.cs" />
+    <Compile Include="Fix\XmlDictionary.cs" />
+    <Compile Include="Fix\XmlQfxDictionary.cs" />
+    <Compile Include="Ipc.Endpoints\IVfxEndpoint.cs" />
+    <Compile Include="Ipc.Endpoints\VfxEndpointFactory.cs" />
+    <Compile Include="Ipc.Endpoints\VfxTcpClientEndpoint.cs" />
+    <Compile Include="Ipc.Endpoints\VfxTcpClientSession.cs" />
+    <Compile Include="Ipc.Endpoints\VfxTcpServerEndpoint.cs" />
+    <Compile Include="Ipc.Endpoints\VfxTcpServerSession.cs" />
+    <Compile Include="Ipc\IVfxIpcModule.cs" />
+    <Compile Include="Ipc\IVfxIpcSession.cs" />
+    <Compile Include="Ipc\IVfxIpcSessionFactory.cs" />
+    <Compile Include="Ipc\VfxIpcEventArgs.cs" />
+    <Compile Include="Ipc\VfxIpcEventTypes.cs" />
+    <Compile Include="Ipc\VfxMsgBlock.cs" />
+    <Compile Include="Ipc\VfxTcpAcceptor.cs" />
+    <Compile Include="Ipc\VfxTcpConnector.cs" />
+    <Compile Include="Ipc\VfxTcpConnectorEventArgs.cs" />
+    <Compile Include="Ipc\VfxTcpConnectorEventTypes.cs" />
+    <Compile Include="Ipc\VfxTcpModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequencer\VfxSequencer.cs" />
+    <Compile Include="Services\IVfxServices.cs" />
+    <Compile Include="Services\VfxServices.cs" />
+    <Compile Include="Settings\VfxSettings.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF NOT EXIST $(SolutionDir)..\Bin MKDIR $(SolutionDir)..\Bin
+COPY $(TargetDir)*.dll $(SolutionDir)..\Bin
+COPY $(TargetDir)*.pdb $(SolutionDir)..\Bin
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

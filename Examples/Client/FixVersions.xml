@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- FIX version Definitions for the VersaFix FIX Engine -->
+<versions>
+  <!-- version definition for FIX 4.0 -->
+  <version name="FIX 4.0" layer="combined" bs="FIX.4.0" id="2">
+    <rules>
+      <rule name="FIX 4.0">
+        <match tag="8" value="FIX.4.0"/>
+      </rule>
+      <rule name="FIX 4.0 over FIXT">
+        <match tag="1128" value="2"/>
+      </rule>
+    </rules>
+    <properties>
+      <property name="FIX.ApplVerID" value="3"/>
+      <property name="FIX.BeginString" content="FIX.4.0"/>
+    </properties>
+    <dictionaries>
+      <dictionary name="FIX.4.0"/>
+    </dictionaries>
+  </version>
+  <!-- version definition for FIX 4.1 -->
+  <version name="FIX 4.1" layer="combined" bs="FIX.4.1" id="3">
+    <rules>
+      <rule name="FIX 4.1">
+        <match tag="8" value="FIX.4.1"/>
+      </rule>
+      <rule name="FIX 4.1 over FIXT">
+        <match tag="1128" value="3"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.4.1"/>
+    </dictionaries>
+  </version>
+  <!-- version definition for FIX 4.2 -->
+  <version name="FIX 4.2" layer="combined" bs="FIX.4.2" id="4">
+    <rules>
+      <rule name="FIX 4.2">
+        <match tag="8" value="FIX.4.2"/>
+      </rule>
+      <rule name="FIX 4.2 over FIXT">
+        <match tag="1128" value="4"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.4.2"/>
+    </dictionaries>
+  </version>
+  <!-- version definition for FIX 4.3 -->
+  <version name="FIX 4.3" layer="combined" bs="FIX.4.3" id="5">
+    <rules>
+      <rule name="FIX 4.3">
+        <match tag="8" value="FIX.4.3"/>
+      </rule>
+      <rule name="FIX 4.3 Over FIXT">
+        <match tag="1128" value="5"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.4.3"/>
+    </dictionaries>
+  </version>
+  <!-- version definition for FIX 4.4 -->
+  <version name="FIX 4.4" layer="combined" bs="FIX.4.4" id="6">
+    <rules>
+      <rule name="FIX 4.4">
+        <match tag="8" value="FIX.4.4"/>
+      </rule>
+      <rule name="FIX 4.4 Over FIXT">
+        <match tag="1128" value="6"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.4.4"/>
+    </dictionaries>
+  </version>
+  <!-- version definition for FIXT 1.1 -->
+  <version name="FIXT 1.1" layer="session" bs="FIXT.1.1">
+    <rules>
+      <rule name="FIXT 1.1">
+        <match tag="8" value="FIXT.1.1"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIXT.1.1"/>
+    </dictionaries>
+  </version>
+  <version name="FIX 5.0 SP1" layer="application" id="7">
+    <rules>
+      <rule name="FIX 5.0 SP1">
+        <match tag="1128" value="7"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.5.0-SP1"/>
+    </dictionaries>
+  </version>
+  <version name="FIX 5.0 SP2" layer="application" id="8">
+    <rules>
+      <rule name="FIX 5.0 SP2">
+        <match tag="1128" name="ApplVerID" value="8"/>
+      </rule>
+    </rules>
+    <dictionaries>
+      <dictionary name="FIX.5.0-SP2"/>
+    </dictionaries>
+  </version>
+</versions>

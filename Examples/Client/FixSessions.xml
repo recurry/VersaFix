@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Engine>
+  <Sessions>
+    <Session name="Client Session - FIX 4.4" type="FIX" id="b2ec9f3a-18fe-238c-3691-2c54f3da41db">
+      <!-- The Endpoint element defines the IPC mechanism the session will use. -->
+      <Endpoint type="Tcp.Connector">
+        <Settings>
+          <Setting name="Tcp.Connector.Port" content="8585"/>
+          <Setting name="Tcp.Connector.Addr" content="127.0.0.1"/>
+        </Settings>
+      </Endpoint>
+      <Protocol>
+        <Settings>
+          <!-- Indicates whether the session is a 'client' or 'server' session. -->
+          <Setting name="Fix.Session.Role"          content="Client"/>
+          <!-- The name of the version definition for the application layer. -->
+          <Setting name="Fix.Session.Ax.Version"    content="FIX 4.2"/>
+          <!-- The FIX SenderCompID for the session. -->
+          <Setting name="Fix.Session.SenderCompID"  content="VFXSERVER42"/>
+          <!-- The FIX TargetCompID for the session. -->
+          <Setting name="Fix.Session.TargetCompID"  content="VFXCLIENT42"/>
+        </Settings>
+      </Protocol>
+      <Database type="file">
+        <Settings>
+          <Setting name="Database.Path" content="Store\b2ec9f3a-18fe-238c-3691-2c54f3da41db"/>
+        </Settings>
+      </Database>
+    </Session>
+    <Session name="Client Session - FIX 5.0 SP1" type="FIX" id="b2ec9f3a-18fe-238c-3691-2c54f3da41db">
+      <!-- The Endpoint element defines the IPC mechanism the session will use. -->
+      <Endpoint type="Tcp.Connector">
+        <Settings>
+          <Setting name="Tcp.Connector.Port" content="8586"/>
+          <Setting name="Tcp.Connector.Addr" content="127.0.0.1"/>
+        </Settings>
+      </Endpoint>
+      <Protocol>
+        <Settings>
+          <!-- Indicates whether the session is a 'client' or 'server' session. -->
+          <Setting name="Fix.Session.Role"          content="Client"/>
+          <!-- The name of the version definition for the session layer. -->
+          <Setting name="Fix.Session.Sx.Version"    content="FIXT 1.1"/>
+          <!-- The name of the version definition for the application layer. -->
+          <Setting name="Fix.Session.Ax.Version"    content="FIX 5.0 SP1"/>
+          <!-- The name of the default definition for the application layer. -->
+          <Setting name="Fix.Session.Ax.Default"    content="FIX 5.0 SP1"/>
+          <!-- The FIX SenderCompID for the session. -->
+          <Setting name="Fix.Session.SenderCompID"  content="VFXCLIENT51"/>
+          <!-- The FIX TargetCompID for the session. -->
+          <Setting name="Fix.Session.TargetCompID"  content="VFXSERVER51"/>
+        </Settings>
+      </Protocol>
+      <Database type="file">
+        <Settings>
+          <Setting name="Database.Path" content="Store\b2ec9f3a-18fe-238c-3691-2c54f3da41db"/>
+        </Settings>
+      </Database>
+    </Session>
+  </Sessions>
+</Engine>
