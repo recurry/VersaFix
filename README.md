@@ -1,4 +1,10 @@
 VersaFix
 ========
 
-The VersaFix FIX Engine for .NET/Mono
+The VersaFix OSS FIX engine for the .NET/Mono platform.
+
+License:
+--------
+BSD
+
+
